@@ -8,10 +8,6 @@ setup(
         "dagster-cloud",
         "boto3",
         "pandas",
-        "matplotlib",
-        "textblob",
-        "tweepy",
-        "wordcloud",
     ],
     extras_require={"dev": ["dagit", "pytest"]},
 )
