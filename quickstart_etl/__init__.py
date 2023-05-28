@@ -1,16 +1,11 @@
-from dagster import (
-    Definitions,
-    ScheduleDefinition,
-    define_asset_job,
-    load_assets_from_package_module,
-)
+from dagster import Definitions, load_assets_from_package_module
 
 from . import assets
-
-daily_refresh_schedule = ScheduleDefinition(
-    job=define_asset_job(name="all_assets_job"), cron_schedule="0 0 * * *"
-)
+from .resources import duckdb_init, substack_init
+from .schedules import daily_refresh_schedule
 
 defs = Definitions(
-    assets=load_assets_from_package_module(assets), schedules=[daily_refresh_schedule]
+    assets=load_assets_from_package_module(assets),
+    schedules=[daily_refresh_schedule],
+    resources={"substack": substack_init, "duckdb": duckdb_init},
 )
