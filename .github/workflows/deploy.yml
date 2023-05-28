@@ -8,6 +8,7 @@ concurrency:
   # Cancel in-progress deploys to same branch
   group: ${{ github.ref }}/deploy
   cancel-in-progress: true
+
 env:
   DAGSTER_CLOUD_URL: "http://stkbailey.dagster.cloud"
   DAGSTER_CLOUD_API_TOKEN: ${{ secrets.DAGSTER_CLOUD_API_TOKEN }}

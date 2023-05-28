@@ -8,6 +8,10 @@ setup(
         "dagster-cloud",
         "boto3",
         "pandas",
+        "requests",
+        "dagster-duckdb",
+        "beautifulsoup4",
+        "networkx",
     ],
-    extras_require={"dev": ["dagit", "pytest"]},
+    extras_require={"dev": ["dagit", "pytest", "black"]},
 )
