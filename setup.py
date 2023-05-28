@@ -13,5 +13,5 @@ setup(
         "beautifulsoup4",
         "networkx",
     ],
-    extras_require={"dev": ["dagit", "pytest", "black"]},
+    extras_require={"dev": ["dagit", "pytest", "black", "isort"]},
 )

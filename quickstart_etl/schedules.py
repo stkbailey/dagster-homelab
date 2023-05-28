@@ -1,7 +1,4 @@
-from dagster import (
-    ScheduleDefinition,
-    define_asset_job,
-)
+from dagster import ScheduleDefinition, define_asset_job
 
 from . import assets
 

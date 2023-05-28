@@ -2,13 +2,13 @@ run:
 	dagster dev
 
 setup:
-	pip install -e .[extra]
+	pip install -e .[dev]
 
 format:
-	black .
+	black . && isort .
 
 materialize:
-	dagster asset materialize -m quickstart_etl --select substack_stats
+	dagster asset materialize -m quickstart_etl --select substack_graph
 
 test:
 	pytest quickstart_etl_tests
