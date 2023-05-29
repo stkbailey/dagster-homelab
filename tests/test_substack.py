@@ -1,4 +1,4 @@
-from quickstart_etl.utils import SubstackClient
+from dagster_repo.utils import SubstackClient
 
 
 def test_client_scrapes_page():

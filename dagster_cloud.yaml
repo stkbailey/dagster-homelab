@@ -1,4 +1,4 @@
 locations:
 - code_source:
-    package_name: quickstart_etl
+    package_name: dagster_repo
   location_name: homelab

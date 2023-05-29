@@ -6,7 +6,7 @@ import networkx
 from dagster import Config, OpExecutionContext, asset
 from dagster_duckdb import DuckDBResource
 
-from quickstart_etl.resources import SubstackResource
+from dagster_repo.resources import SubstackResource
 
 
 class AssetConfig(Config):

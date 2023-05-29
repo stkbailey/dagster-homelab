@@ -8,7 +8,7 @@ format:
 	black . && isort .
 
 materialize:
-	dagster asset materialize -m quickstart_etl --select substack_graph
+	dagster asset materialize -m dagster_repo --select substack_graph
 
 test:
-	pytest quickstart_etl_tests
+	pytest tests
